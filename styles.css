@@ -1,0 +1,128 @@
+/* --- Styles Généraux --- */
+
+body {
+    /* Fond semi-transparent ou couleur neutre pour s'intégrer au menu Minecraft */
+    background-color: rgba(0, 0, 0, 0.7); /* Gris très foncé semi-transparent */
+    color: #E0E0E0; /* Couleur du texte général (gris clair) */
+    font-family: 'Roboto Mono', monospace; /* Police lisible et légèrement technique */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    
+    /* Effet de Plaque de Métal Steampunk */
+    background-color: #38312B; /* Métal sombre */
+    border: 5px solid #A67C52; /* Bordure Laiton/Bronze */
+    border-radius: 8px; /* Coins légèrement arrondis */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 5px #FFD700; /* Ombre et légère lueur dorée */
+}
+
+/* --- En-tête et Titres --- */
+
+header {
+    text-align: center;
+    border-bottom: 2px dashed #A67C52; /* Ligne de séparation de style industriel */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 3em;
+    color: #FFD700; /* Or/Laiton Vif */
+    text-shadow: 1px 1px 3px #000;
+    margin: 0;
+    /* (MCEF ne supporte pas toutes les polices, mais on essaie la substitution) */
+}
+
+.subtitle {
+    font-style: italic;
+    color: #C0C0C0; /* Argenté */
+    margin-top: 5px;
+    font-size: 1.1em;
+}
+
+h2 {
+    color: #A67C52; /* Bronze/Laiton pour les sous-titres */
+    font-size: 1.8em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #FFFFFF; /* Blanc pour le titre de l'actualité */
+    margin-top: 5px;
+}
+
+/* --- Section Actualités --- */
+
+#news-section {
+    padding-left: 10px;
+}
+
+.news-item {
+    border-left: 3px solid #6B8E23; /* Couleur Olive/Nature pour marquer l'actualité */
+    padding-left: 15px;
+    margin-bottom: 25px;
+    background-color: #2D2621; /* Fond légèrement plus sombre pour le bloc */
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.news-item.latest {
+    border-left-color: #FF4500; /* Rouge/Magma pour les dernières news */
+    box-shadow: 0 0 5px rgba(255, 69, 0, 0.5);
+}
+
+.date {
+    display: block;
+    font-size: 0.85em;
+    color: #C0C0C0;
+    margin-bottom: 5px;
+}
+
+ul {
+    list-style-type: '— '; /* Style de liste avec un tiret */
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+/* --- Section Liens Utiles --- */
+
+#links-section {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 2px dashed #A67C52;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    
+    /* Style de bouton industriel */
+    background-color: #A67C52; /* Laiton */
+    color: #38312B; /* Texte sombre */
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #FFD700; /* Laiton plus lumineux au survol */
+}
+
+/* --- Pied de Page --- */
+
+footer {
+    text-align: center;
+    font-size: 0.8em;
+    color: #707070;
+    margin-top: 20px;
+}
