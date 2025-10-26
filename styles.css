@@ -18,7 +18,7 @@ body {
     height: 100vh;
     width: 100vw;
     /* Police qui simule l'aspect "pixel" ou monospace de Minecraft */
-    font-family: 'Minecraftia', 'Consolas', 'Courier New', monospace;
+    font-family: 'Press Start 2P', 'Consolas', monospace;
     color: var(--color-text-main);
 }
 
@@ -119,3 +119,4 @@ body {
             margin: 20px 0;
 
         }
+
