@@ -1,5 +1,5 @@
 :root {
-    --color-bg-dark: rgba(30, 30, 30, 0.9);   /* Fond des panneaux */
+    --color-bg-dark: rgba(30, 30, 30, 0.75);   /* Fond des panneaux */
     --color-text-main: #f0f0f0;             /* Texte principal (blanc cassé) */
     --color-accent-blue: #5555ff;           /* Bleu pour l'accentuation/serveur */
     --color-accent-green: #00aa00;          /* Vert pour l'accentuation/modpack */
@@ -117,4 +117,5 @@ body {
             border: none;
             border-top: 1px solid var(--color-border);
             margin: 20px 0;
+
         }
