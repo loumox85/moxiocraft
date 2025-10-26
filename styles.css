@@ -1,0 +1,120 @@
+:root {
+    --color-bg-dark: rgba(30, 30, 30, 0.9);   /* Fond des panneaux */
+    --color-text-main: #f0f0f0;             /* Texte principal (blanc cassé) */
+    --color-accent-blue: #5555ff;           /* Bleu pour l'accentuation/serveur */
+    --color-accent-green: #00aa00;          /* Vert pour l'accentuation/modpack */
+    --color-border: #444444;                /* Ligne de séparation/ombre interne */
+}
+
+html {
+    background-color: transparent;
+}
+
+body {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    /* Police qui simule l'aspect "pixel" ou monospace de Minecraft */
+    font-family: 'Minecraftia', 'Consolas', 'Courier New', monospace;
+    color: var(--color-text-main);
+}
+
+        /* Conteneur principal */
+        .container {
+            width: 100vw;
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+            border-radius: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ================================================= */
+        /* EN-TÊTE PRINCIPAL : "Quoi d'neuf ?" */
+        /* ================================================= */
+
+        .main-header {
+            background-color: rgba(30, 30, 30, 0.95);
+            padding: 10px 20px;
+            border-radius: 6px 6px 0 0; /* Coins arrondis en haut */
+            border-bottom: 2px solid var(--color-border);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            text-align: center;
+        }
+
+        .main-header h1 {
+            margin: 0;
+            font-size: 1.5em; /* Taille légèrement plus petite que la normale */
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        /* ================================================= */
+        /* Panneau d'Actualité - Style "Minecraft Card" */
+        /* ================================================= */
+
+        .news-panel {
+            background-color: var(--color-bg-dark);
+            padding: 15px 20px 20px 20px;
+            border-radius: 0 0 6px 6px; /* Coins arrondis en bas */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            margin: 0;
+            flex: 1;
+            overflow: hidden;
+        }
+        
+        /* En-têtes stylisés pour différencier les catégories */
+        .article-subheader {
+            padding: 8px 10px;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 4px;
+            text-shadow: 1px 1px #000000;
+        }
+
+        /* Thème pour l'actualité du MODPACK */
+        .modpack-news {
+            background-color: var(--color-accent-green);
+            border: 1px solid #006600;
+            color: white;
+        }
+
+        /* Thème pour l'actualité du SERVEUR */
+        .server-news {
+            background-color: var(--color-accent-blue);
+            border: 1px solid #0000aa;
+            color: white;
+        }
+
+        .news-date {
+            font-size: 0.8em;
+            color: var(--color-text-main);
+            opacity: 0.7;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .news-content p {
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+        
+        .news-content strong {
+            color: #ffff00; /* Jaune vif pour mettre en évidence */
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--color-border);
+            margin: 20px 0;
+        }
