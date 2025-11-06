@@ -69,7 +69,29 @@ body {
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             margin: 0;
             flex: 1;
-            overflow: hidden;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: var(--color-border) var(--color-bg-dark);
+        }
+
+        /* Style de la barre de défilement pour WebKit (Chrome, Safari, etc.) */
+        .news-panel::-webkit-scrollbar {
+            width: 8px; /* Largeur de la barre */
+        }
+
+        .news-panel::-webkit-scrollbar-track {
+            background: var(--color-bg-dark); /* Couleur de fond de la piste */
+            border-radius: 4px;
+        }
+
+        .news-panel::-webkit-scrollbar-thumb {
+            background-color: var(--color-border); /* Couleur du curseur */
+            border-radius: 4px;
+            border: 2px solid var(--color-bg-dark); /* Espace autour du curseur */
+        }
+
+        .news-panel::-webkit-scrollbar-thumb:hover {
+            background-color: #555; /* Couleur du curseur au survol */
         }
         
         /* En-têtes stylisés pour différencier les catégories */
@@ -119,5 +141,3 @@ body {
             margin: 20px 0;
 
         }
-
-
