@@ -98,7 +98,7 @@ body {
         .article-subheader {
             padding: 8px 10px;
             margin-bottom: 15px;
-            font-size: 1.4em;
+            font-size: 1.8em;
             font-weight: bold;
             border-radius: 4px;
             text-shadow: 1px 1px #000000;
@@ -129,6 +129,7 @@ body {
         .news-content p {
             line-height: 1.4;
             margin-bottom: 10px;
+            font-size: 1.2em;
         }
         
         .news-content strong {
@@ -141,4 +142,5 @@ body {
             margin: 20px 0;
 
         }
+
 
