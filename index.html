@@ -1,53 +1,137 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Quoi d'neuf ? - Moxiocraft</title>
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moxiocraft – L’Ère des Rouages</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div class="container">
+<div class="marge-acceuil"></div>
 
-        <header class="main-header">
-            <h1>Quoi d'neuf ?</h1>
-        </header>
-        
-        <div class="news-panel">
+<img src="logo.png" alt="Moxiocraft Logo" class="top-logo">
 
-            <div class="article-subheader modpack-news">
-                📦 Dernières Actualités du Modpack
-            </div>
+<nav>
+  <a href="#">Accueil</a>
+  <a href="./actus.html">Actus</a>
+  <a href="#gameplay">Gameplay</a>
+  <a href="#lore">Lore</a>
+  <a href="#telechargement">Téléchargement</a>
+  <a href="#discord">Discord</a>
+</nav>
 
-            <h3>Mise à Jour V2.0 - Performances, Stabilité, Nouvelle version et nouveaux mods !</h3>
-            <span class="news-date">Publié le ??/??/2025</span>
-            <div class="news-content">
-                <p>La version 2.0 est sortie ! Nous avons passé beaucoup de temps à optimiser les performances et à corriger la stabilité afin que vous ayez la meilleure exprérience possible.</p>
-                <p>Nouveaux Mods : Par exemple, le mod "Vanilla Backports" a été ajouté afin de rajouter certaines fonctionnalités des nouvelles versions du jeu comme le Happy Ghast.</p>
-            </div>
-            
-            <hr>
-
-            <div class="article-subheader server-news">
-                🌐 Actualités du Serveur Officiel
-            </div>
-
-            <h3>Ouverture Prochaine du Serveur</h3>
-            <span class="news-date">Publié le ??/??/2025</span>
-            <div class="news-content">
-                <p>L'ouverture va bientôt avoir lieu ! Le serveur est presque prêt à accueillir ses joueurs. Les derniers ajustements et préparatifs sont en cours afin d'assurer la meilleure expérience possible à nos joueurs.</p>
-                <p>Rejoignez-nous sur Discord pour plus de détails et ne rien manquer des actualités !</p>
-                <p>Ouverture pour le moment prévue fin décembre / début janvier !</p>
-            </div>
-        </div>
-
+<header class="header">
+  <div>
+    <div class="logo-container">
+      <img src="logo.png" alt="Moxiocraft Logo" class="header-logo-icon">
+      <img src="moxiocraft.png" alt="Moxiocraft Texte" class="header-logo-img">
     </div>
+    <div class="buttons">
+      <a href="#gameplay" class="btn modpack">Découvrir le modpack</a>
+      <a href="#telechargement" class="btn lore">Téléchargement (Curseforge/Modrinth)</a>
+      <a href="#discord" class="btn discord">
+        <img src="logo_discord.png" alt="Discord Logo" style="height: 1.8em; margin-right: 0.7em;">
+        Rejoins nous sur Discord
+      </a>
+    </div>
+  </div>
+</header>
+
+<section id="gameplay">
+  <h2>⚙️ L’Expérience Moxiocraft</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>🔩 Technologie</h3>
+      <p>Les machines, la vapeur et l'automatisation remplacent la magie ancienne grâce à des mods comme Create.</p>
+    </div>
+    <div class="card">
+      <h3>🐉 Dragons</h3>
+      <p>Des créatures sauvages fantastiques et dominantes. Les combattre ou les apprivoiser est un choix stratégique.</p>
+    </div>
+    <div class="card">
+      <h3>🔐 Sécurité</h3>
+      <p>Installez des systèmes de protection avancés pour sécuriser vos constructions.</p>
+    </div>
+    <div class="card">
+      <h3>🏰 Villages</h3>
+      <p>Chaque village évolue indépendamment dans un monde vivant et compétitif.</p>
+    </div>
+  </div>
+</section>
+
+<section id="lore">
+  <h2>📜 L’Ère des Rouages</h2>
+  <div class="lore-container">
+    <p>Après des siècles de guerre entre les humains et les dragons, le monde de Moxion n’est plus que ruines et cendres.</p><br>
+    <p>Les survivants se sont réfugiés sous terre, oubliant la magie et la lumière du soleil. Quand ils en ressortent enfin, le monde a changé : la nature a repris ses droits, et les dragons règnent à nouveau sur les cieux.</p><br>
+    <p>Mais les humains, cette fois, ne comptent plus sur la magie. Ils ont découvert un nouveau pouvoir : la mécanique. Grâce aux engrenages et à la vapeur, ils bâtissent, innovent et contrôlent — créant des machines capables de rivaliser avec les créatures qu’ils craignent le plus.</p><br>
+    <p>Chaque village forge sa propre destinée, développe sa technologie et défend son territoire grâce à des systèmes avancés de sécurité. Les alliances sont rares, les rivalités féroces.</p><br>
+    <p>Dans ce monde renaissant, l’objectif est clair : apprivoiser à nouveau les dragons, dompter la technologie… et devenir le village que nul n’osera attaquer.</p><br>
+  </div>
+</section>
+
+<section id="telechargement" style="text-align:center">
+  <h2>🌍 Rejoins l’Aventure</h2>
+  <div class="text-container">Afin de rejoindre le monde de Moxion, te voici les liens de téléchargement :</div><br>
+  <div class="buttons">
+    <a id="modrinth-btn" class="btn modrinth" data-url="https://modrinth.com/modpack/moxiocraft" href="#">Téléchargement sur Modrinth (Recommandé)</a>
+    <a id="curseforge-btn" class="btn curseforge" data-url="https://www.curseforge.com/minecraft/modpacks/moxiocraft" href="#">Téléchargement sur Curseforge</a>
+  </div>
+</section>
+
+<section id="discord">
+  <h2 style="text-align: center; display: flex; align-items: center; justify-content: center;">
+    <img src="logo_discord.png" alt="Discord Logo" style="height: 1em; margin-right: 0.4em;">
+    Rejoindre le serveur Discord
+  </h2>
+  <div style="display: flex; justify-content: center; align-items: center; gap: 2em; margin-top: 1em; flex-wrap: wrap;">
+    <div class="discord-text-container">
+        <p>Tu souhaites être informé des dernières actualités ?</p>
+        <p>Tu souhaites discuter avec d'autres joueurs ?</p>
+        <p>Alors rejoins notre serveur Discord officiel !</p>
+    </div>
+    <iframe src="https://discord.com/widget?id=1287848130368503930&theme=dark" width="350" height="400" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+  </div>
+</section>
+
+<footer>
+  <div>
+    © 2025 – Moxiocraft • L’Ère des Rouages
+  </div>
+  <div>
+    Certains logos ont été générés par l'IA et modifiés par nos soins.
+  </div>
+</footer>
+
+<div id="confirm-modal-curseforge" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Confirmation</h2>
+    <p>Vous allez être redirigé vers le site de CurseForge pour télécharger le modpack. Continuer ?</p>
+    <div class="modal-buttons">
+      <button id="confirm-yes-curseforge" class="btn">Oui</button>
+      <button id="confirm-cancel-curseforge" class="btn">Annuler</button>
+    </div>
+  </div>
+</div>
+
+<div id="confirm-modal-modrinth" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Confirmation</h2>
+    <p>Vous allez être redirigé vers le site de Modrinth pour télécharger le modpack. Continuer ?</p>
+    <div class="modal-buttons">
+      <button id="confirm-yes-modrinth" class="btn">Oui</button>
+      <button id="confirm-cancel-modrinth" class="btn">Annuler</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js" defer></script>
 
 </body>
-
 </html>
-
-
-

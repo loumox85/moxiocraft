@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <link rel="stylesheet" href="news-styles.css">
+    <title>Quoi d'neuf ? - Moxiocraft</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="main-header">
+            <h1>Quoi d'neuf ?</h1>
+        </header>
+        
+        <div class="news-panel">
+            
+            <!--<div class="news-article" data-date="??/??/???? ??:??">
+                <div class="new-badge">NOUVEAU !</div>
+                <div class="news-body">
+                    <h3>Ouverture Prochaine du Serveur</h3>
+                    <span class="news-date">Publié le ??/??/???? à ??:??</span><span class="news-date-relative"></span>
+                    <div class="news-labels">
+                        <span class="label server">Serveur</span>
+                        <span class="label info">Info</span>
+                    </div>
+                    <div class="news-content">
+                        <p>L'ouverture va bientôt avoir lieu ! Le serveur est presque prêt à accueillir ses joueurs. Les derniers ajustements et préparatifs sont en cours afin d'assurer la meilleure expérience possible à nos joueurs.</p>
+                        <p>Rejoignez-nous sur Discord pour plus de détails et ne rien manquer des actualités !</p>
+                        <p>Ouverture pour le moment prévue fin décembre / début janvier !</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-article" data-date="20/12/2025 10:00">
+                <div class="new-badge">NOUVEAU !</div>
+                <img src="./minecraft-steve-and-dragon.jpg" alt="Mise à jour V2.0" class="news-image">
+                <div class="news-body">
+                    <h3>Mise à Jour V2.0 - Performances, Stabilité, Nouvelle version et nouveaux mods !</h3>
+                    <span class="news-date">Publié le 20/12/2025 à 10:00</span><span class="news-date-relative"></span>
+                    <div class="news-labels">
+                        <span class="label modpack">Modpack</span>
+                        <span class="label update">Mise à jour</span>
+                    </div>
+                    <div class="news-content">
+                        <p>La version 2.0 est sortie ! Nous avons passé beaucoup de temps à optimiser les performances et à corriger la stabilité afin que vous ayez la meilleure exprérience possible.</p>
+                        <p>Nouveaux Mods : Par exemple, le mod "Vanilla Backports" a été ajouté afin de rajouter certaines fonctionnalités des nouvelles versions du jeu comme le Happy Ghast.</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr>-->
+
+            <div class="news-article" data-date="20/12/2025 22:30">
+                <div class="new-badge">NOUVEAU !</div>
+                <div class="news-body">
+                    <h3>Publication du site web officiel</h3>
+                    <span class="news-date">Publié le 20/12/2025 à 22:30</span><span class="news-date-relative"></span>
+                    <div class="news-labels">
+                        <span class="label info">Info</span>
+                    </div>
+                    <div class="news-content">
+                        <p>Le site web officiel du modpack Moxiocraft est maintenant disponible !</p>
+                        <p>Découvrez le à partir de ce lien : <a href="https://loumox85.github.io/moxiocraft" style="color: aqua">https://loumox85.github.io/moxiocraft</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        const sendHeight = () => {
+            setTimeout(() => {
+                const height = document.body.scrollHeight;
+                window.parent.postMessage({ frameHeight: height }, '*');
+            }, 150);
+        };
+
+        const formatTimeAgo = (date, now) => {
+            const seconds = Math.floor((now - date) / 1000);
+            const minutes = Math.floor(seconds / 60);
+            const hours = Math.floor(minutes / 60);
+            const days = Math.floor(hours / 24);
+
+            if (seconds < 10) {
+                return "(à l'instant)";
+            } else if (seconds < 60) {
+                return `(il y a ${seconds} secondes)`;
+            }
+
+            if (minutes < 60) {
+                return `(il y a ${minutes} minute${minutes > 1 ? 's' : ''})`;
+            }
+
+            if (hours < 24) {
+                return `(il y a ${hours} heure${hours > 1 ? 's' : ''})`;
+            }
+
+            if (days === 1) {
+                return "(hier)";
+            }
+            
+            return `(il y a ${days} jours)`;
+        };
+
+        const checkNewArticles = () => {
+            const articles = document.querySelectorAll('.news-article');
+            const now = new Date();
+            const oneWeekInMs = 7 * 24 * 60 * 60 * 1000;
+
+            articles.forEach(article => {
+                const dateStr = article.dataset.date;
+                const relativeDateSpan = article.querySelector('.news-date-relative');
+
+                if (!dateStr || dateStr.includes('?') || !relativeDateSpan) {
+                    return;
+                }
+
+                const [datePart, timePart] = dateStr.split(' ');
+                const dateParts = datePart.split('/');
+                
+                if (dateParts.length !== 3) {
+                    return;
+                }
+
+                let articleDate;
+
+                if (timePart) {
+                    const timeParts = timePart.split(':');
+                    if (timeParts.length === 2) {
+                        articleDate = new Date(dateParts[2], dateParts[1] - 1, dateParts[0], timeParts[0], timeParts[1]);
+                    } else {
+                        articleDate = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
+                    }
+                } else {
+                    articleDate = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
+                }
+                
+                if (isNaN(articleDate.getTime())) {
+                    return; 
+                }
+
+                const timeDiff = now.getTime() - articleDate.getTime();
+
+                if (timeDiff > 0) {
+                    relativeDateSpan.textContent = ` ${formatTimeAgo(articleDate, now)}`;
+                    if (timeDiff < oneWeekInMs) {
+                        article.classList.add('is-new');
+                    } else {
+                        article.classList.remove('is-new');
+                    }
+                } else {
+                    relativeDateSpan.textContent = '';
+                    article.classList.remove('is-new');
+                }
+            });
+            
+            sendHeight();
+        };
+
+        window.addEventListener('load', sendHeight);
+
+        const observer = new ResizeObserver(sendHeight);
+        observer.observe(document.body);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            checkNewArticles();
+            setInterval(checkNewArticles, 30000); // Actualise toutes les 30 secondes
+        });
+    </script>
+
+</body>
+
+</html>
+
+
