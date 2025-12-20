@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moxiocraft – L’Ère des Rouages</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<img src="logo.png" alt="Moxiocraft Logo" class="top-logo">
+
+<nav>
+  <a href="./index.html#">Accueil</a>
+  <a href="#">Actus</a>
+  <a href="./index.html#gameplay">Gameplay</a>
+  <a href="./index.html#lore">Lore</a>
+  <a href="./index.html#telechargement">Téléchargement</a>
+  <a href="./index.html#discord">Discord</a>
+</nav>
+
+<div class="marge-sections"></div>
+
+<section id="lore">
+  <h2>ℹ️ Actualités / Mises à jour</h2><br>
+  <div class="actus-container" style="width: 90%; margin: auto;">
+    <iframe id="news-iframe" src="./actus/news.html" width="100%" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" style="display: block; border: none; transition: height 0.3s ease;"></iframe>
+  </div>
+</section>
+
+<footer>
+  <div>
+    © 2025 – Moxiocraft • L’Ère des Rouages
+  </div>
+  <div>
+    Certains logos ont été générés par l'IA et modifiés par nos soins.
+  </div>
+</footer>
+
+<script>
+    window.addEventListener('message', function(event) {
+        // A security check on the origin is best practice, but we'll skip a strict
+        // one here since we're dealing with local files.
+        
+        // Check if the message contains our expected data format.
+        if (event.data && typeof event.data.frameHeight === 'number') {
+            const iframe = document.getElementById('news-iframe');
+            if (iframe) {
+                // Set the iframe height, adding a little extra space for safety.
+                iframe.style.height = (event.data.frameHeight + 20) + 'px';
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
