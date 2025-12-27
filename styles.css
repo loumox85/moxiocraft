@@ -273,6 +273,7 @@
       text-align: left;
       max-width: 550px;
       font-size: 1.2rem; /* Increased font size */
+      color: white;
     }
 
     .text-container {
