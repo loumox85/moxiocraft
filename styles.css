@@ -12,7 +12,11 @@
     body{
       position: relative; /* Added for the gradient's positioning context */
       font-family:'Poppins',sans-serif;
-      background:linear-gradient(#00536d,#00b0e6);
+      background-image: url('background.jpg'); /* Path to your image */
+      background-size: cover; /* Scale image to cover the entire area */
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Prevent tiling */
+      background-attachment: fixed; /* Keep image fixed when scrolling */
       color:#1f2937;
       overflow-x:hidden;
     }
