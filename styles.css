@@ -12,7 +12,7 @@
     body{
       position: relative; /* Added for the gradient's positioning context */
       font-family:'Poppins',sans-serif;
-      background-image: url('background.jpg'); /* Path to your image */
+      background-image: url('background.png'); /* Path to your image */
       background-size: cover; /* Scale image to cover the entire area */
       background-position: center; /* Center the image */
       background-repeat: no-repeat; /* Prevent tiling */
