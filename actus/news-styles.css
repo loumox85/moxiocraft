@@ -176,4 +176,20 @@ hr {
     border-top: 1px solid var(--color-border);
     margin: 20px 0;
 }
+/* Responsive tweaks for mobile */
+@media (max-width: 600px) {
+    .main-header h1 { font-size: 1.2em }
+    .news-panel { padding: 10px; }
+    .news-article { padding: 12px; }
+    .news-image { max-height: 220px; }
+    .news-content p { font-size: 1em }
+    .label { font-size: 0.8em }
+    .new-badge { top: -6px; right: -6px; font-size: 0.9em }
+}
+
+@media (max-width: 360px) {
+    .news-image { max-height: 160px }
+    .news-panel { padding: 8px }
+    .main-header { padding: 8px }
+}
 

@@ -15,7 +15,30 @@
 
 <img src="logo.png" alt="Moxiocraft Logo" class="top-logo">
 
-<nav>
+<!-- Hamburger (mobile) -->
+<button id="hamburger" class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<!-- Mobile off-canvas nav (hidden by default) -->
+<nav id="mobile-nav" class="mobile-nav" aria-hidden="true">
+  <div class="mobile-nav-header">
+    <img src="logo.png" alt="Moxiocraft" class="mobile-nav-logo">
+    <button class="close-mobile" aria-label="Fermer le menu">×</button>
+  </div>
+  <a href="#">Accueil</a>
+  <a href="./actus.html">Actus</a>
+  <a href="#gameplay">Gameplay</a>
+  <a href="#lore">Lore</a>
+  <a href="#telechargement">Téléchargement</a>
+  <a href="#discord">Discord</a>
+</nav>
+
+<div id="mobile-overlay" class="mobile-overlay" aria-hidden="true"></div>
+<!-- Desktop nav (kept for larger screens) -->
+<nav class="desktop-nav">
   <a href="#">Accueil</a>
   <a href="./actus.html">Actus</a>
   <a href="#gameplay">Gameplay</a>
@@ -94,7 +117,7 @@
         <p>Tu souhaites discuter avec d'autres joueurs ?</p>
         <p>Alors rejoins notre serveur Discord officiel !</p>
     </div>
-    <iframe src="https://discord.com/widget?id=1287848130368503930&theme=dark" width="350" height="400" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    <iframe class="discord-widget" src="https://discord.com/widget?id=1287848130368503930&theme=dark" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
   </div>
 </section>
 
