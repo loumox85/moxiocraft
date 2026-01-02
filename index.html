@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Moxiocraft – L’Ère des Rouages</title>
 
-  <!-- Fonts -->
+  <!-- Polices -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -22,7 +22,7 @@
   <span></span>
 </button>
 
-<!-- Mobile off-canvas nav (hidden by default) -->
+<!-- Barre de navigation mobile -->
 <nav id="mobile-nav" class="mobile-nav" aria-hidden="true">
   <div class="mobile-nav-header">
     <img src="logo.png" alt="Moxiocraft" class="mobile-nav-logo">
@@ -37,7 +37,7 @@
 </nav>
 
 <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true"></div>
-<!-- Desktop nav (kept for larger screens) -->
+<!-- Barre de navigation PC -->
 <nav class="desktop-nav">
   <a href="#">Accueil</a>
   <a href="./actus.html">Actus</a>
@@ -55,7 +55,7 @@
     </div>
     <div class="buttons">
       <a href="#gameplay" class="btn modpack">Découvrir le modpack</a>
-      <a href="#telechargement" class="btn lore">Téléchargement (Curseforge/Modrinth)</a>
+      <a href="#telechargement" class="btn lore">Téléchargement (Modrinth)</a>
       <a href="#discord" class="btn discord">
         <img src="logo_discord.png" alt="Discord Logo" style="height: 1.8em; margin-right: 0.7em;">
         Rejoins nous sur Discord
@@ -101,8 +101,7 @@
   <h2>🌍 Rejoins l’Aventure</h2>
   <div class="text-container">Afin de rejoindre le monde de Moxion, te voici les liens de téléchargement :</div><br>
   <div class="buttons">
-    <a id="modrinth-btn" class="btn modrinth" data-url="https://modrinth.com/modpack/moxiocraft" href="#">Téléchargement sur Modrinth (Recommandé)</a>
-    <a id="curseforge-btn" class="btn curseforge" data-url="https://www.curseforge.com/minecraft/modpacks/moxiocraft" href="#">Téléchargement sur Curseforge</a>
+    <a id="modrinth-btn" class="btn modrinth" data-url="https://modrinth.com/modpack/moxiocraft" href="#">Téléchargement sur Modrinth</a>
   </div>
 </section>
 
@@ -129,18 +128,6 @@
     Certains logos ont été générés par l'IA et modifiés par nos soins.
   </div>
 </footer>
-
-<div id="confirm-modal-curseforge" class="modal">
-  <div class="modal-content">
-    <span class="close-btn">&times;</span>
-    <h2>Confirmation</h2>
-    <p>Vous allez être redirigé vers le site de CurseForge pour télécharger le modpack. Continuer ?</p>
-    <div class="modal-buttons">
-      <button id="confirm-yes-curseforge" class="btn">Oui</button>
-      <button id="confirm-cancel-curseforge" class="btn">Annuler</button>
-    </div>
-  </div>
-</div>
 
 <div id="confirm-modal-modrinth" class="modal">
   <div class="modal-content">

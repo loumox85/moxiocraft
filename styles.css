@@ -26,7 +26,7 @@
       position: fixed;
       inset: 0;
       z-index: -100; /* behind everything */
-      background-image: url('background.png');
+      background-image: url('background.webp');
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
@@ -123,10 +123,6 @@
 
     .btn.discord{
         background:linear-gradient(#5865F2,#404EED);color:#fff;
-    }
-
-    .btn.curseforge{
-        background:linear-gradient(#ff9100,#7c4600);color:#fff;
     }
 
     .btn.modrinth{
