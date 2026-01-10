@@ -162,9 +162,13 @@ body {
 }
 
 .news-content p {
-    line-height: 1.4;
-    margin-bottom: 10px;
-    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    font-size: 1.18em;
+    /* give each paragraph a subtle translucent card to improve readability */
+    background: rgba(255,255,255,0.04);
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
 }
 
 .news-content strong {

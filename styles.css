@@ -5,7 +5,7 @@
       --dark:#0f172a;
       --primary:#f59e0b;
       --secondary:#22c55e;
-      --card:#ffffffee;
+      --tint:rgba(15, 23, 42, 0.5);
     }
 
     *{margin:0;padding:0;box-sizing:border-box}
@@ -53,8 +53,6 @@
       z-index: 9; /* Below the nav (10) but above content */
       pointer-events: none; /* Don't intercept clicks */
     }
-    
-
 
     .subtitle{
       font-size:1.3rem;
@@ -96,7 +94,6 @@
       gap:1.5rem;
       justify-content:center;
       flex-wrap:wrap;
-      margin-top: 20px;
     }
 
     .btn{
@@ -197,12 +194,15 @@
     }
 
     .card{
-      background:var(--card);
+      background:var(--tint);
+      backdrop-filter: blur(2px);
       border-radius:24px;
       padding:2rem;
       box-shadow:0 15px 40px rgba(0,0,0,.15);
       text-align:center;
       transition:.25s;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .card:hover{transform:translateY(-6px)}
@@ -211,14 +211,6 @@
       margin-bottom:1rem;
       font-family:'Baloo 2',cursive;
       font-size:1.6rem;
-    }
-
-    .lore-container{
-      background:rgba(255,255,255,.9);
-      border-radius:30px;
-      padding:3rem;
-      box-shadow:0 20px 50px rgba(0,0,0,.15);
-      line-height:1.8;
     }
 
     .actus-container{
@@ -288,16 +280,40 @@
       margin-top: 20px;
     }
 
+
+    .discord-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2em;
+      flex-wrap: wrap;
+    }
+
     .discord-text-container{
       text-align: left;
-      max-width: 550px;
+      max-width: 580px;
       font-size: 1.2rem; /* Increased font size */
       color: white;
+      background:var(--tint);
+      backdrop-filter: blur(2px);
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: 0 15px 40px rgba(0,0,0,.15);
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .text-container {
       font-size: 1.2rem; /* Increased font size */
       color: white;
+      background:var(--tint);
+      backdrop-filter: blur(2px);
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: 0 15px 40px rgba(0,0,0,.15);
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
 /* Responsive rules (mobile-first enhancements) */
@@ -408,6 +424,10 @@
 
   .top-logo{ height:54px; left:10px; top:8px }
 
+  .discord-container {
+    justify-content: center;
+  }
+
   /* Ensure sections respect the page padding and do not create extra horizontal overflow */
   section{ padding:2rem 0.5rem }
 
@@ -421,7 +441,7 @@
 /* Discord widget sizing: desktop keep a fixed height, mobile will adapt */
 .discord .discord-widget, .discord-widget{
   width: 100%;
-  max-width: 380px;
+  max-width: 450px;
   height: 400px;
   border: none;
 }
