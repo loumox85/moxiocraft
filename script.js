@@ -94,4 +94,15 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeMenu();
   });
+
+  const commandSearch = document.getElementById('command-search');
+  if (commandSearch) {
+    commandSearch.addEventListener('input', (event) => {
+      const query = event.target.value.trim().toLowerCase();
+      document.querySelectorAll('.categorie-container').forEach((card) => {
+        const text = card.textContent.toLowerCase();
+        card.style.display = query === '' || text.includes(query) ? '' : 'none';
+      });
+    });
+  }
 });

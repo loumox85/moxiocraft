@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moxiocraft – L’Ère des Rouages</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<img src="logo.png" alt="Moxiocraft Logo" class="top-logo">
+
+<!-- Hamburger (mobile) -->
+<button id="hamburger" class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<!-- Mobile off-canvas nav (hidden by default) -->
+<nav id="mobile-nav" class="mobile-nav" aria-hidden="true">
+  <div class="mobile-nav-header">
+    <img src="logo.png" alt="Moxiocraft" class="mobile-nav-logo">
+  </div>
+  <a href="./index.html#">Accueil</a>
+  <a href="#">Actus</a>
+  <a href="./index.html#gameplay">Gameplay</a>
+  <a href="./index.html#lore">Lore</a>
+  <a href="./index.html#telechargement">Téléchargement</a>
+  <a href="./index.html#discord">Discord</a>
+</nav>
+
+<div id="mobile-overlay" class="mobile-overlay" aria-hidden="true"></div>
+<!-- Desktop nav (kept for larger screens) -->
+<nav class="desktop-nav">
+  <a href="./index.html#">Accueil</a>
+  <a href="#">Actus</a>
+  <a href="./index.html#gameplay">Gameplay</a>
+  <a href="./index.html#lore">Lore</a>
+  <a href="./index.html#telechargement">Téléchargement</a>
+  <a href="./index.html#discord">Discord</a>
+</nav>
+
+<div class="marge-sections"></div>
+
+<section id="lore">
+  <h2>ℹ️ Commandes</h2>
+</section>
+
+<div class="search-container">
+    <label for="command-search" class="sr-only">Rechercher une commande</label>
+    <input id="command-search" class="search-input" type="search" placeholder="Rechercher une commande..." aria-label="Rechercher une commande">
+</div>
+
+<div class="categorie-main-container">
+    <h1 class="titre-categorie">Commandes des joueurs:</h1>
+    <!-- Bloc pour montrer commande /afk -->
+    <div id="afk" class="categorie-container">
+        <details>
+            <summary>/afk</summary>
+            <p>Commande qui sert à activer/désactiver le mode AFK. Le mode AFK permet de signaler aux autres joueurs que vous êtes inactif. Celà inclut également des protections pour éviter de vous faire tuer ou de subir d'autres événements qui peut vous nuir.</p>
+        </details>
+    </div>
+
+    <div id="ah" class="categorie-container">
+        <details>
+            <summary>/ah</summary>
+            <p>Commande qui ouvre le menu des enchères. Ici vous pourrez y vendre ou trouver des enchères d'items, ils peuvent être inéressants (ou pas) selon le prix. Ils sont souvent différents d'un item que l'on peut acheter dans le shop (voir /shop) car ils ont souvent des enchantements par exemple ou bien sont rares/non disponibles dans le shop.</p>
+        </details>
+    </div>
+
+    <div id="backpack" class="categorie-container">
+        <details>
+            <summary>/backpack</summary>
+            <p>Commande qui permet d'ouvrir le menu de votre sac à dos (backpack), ça peut remplacer la touche que vous avez défini en jeu afin d'ouvrir votre sac.</p>
+        </details>
+    </div>
+
+    <div id="balance" class="categorie-container">
+        <details>
+            <summary>/bal ou /balance</summary>
+            <p>Commande qui vous permet de voir combien d'argent vous avez sur votre compte afin de pouvoir dépenser dans le shop par exemple.</p>
+        </details>
+    </div>
+
+    <div id="balancetop" class="categorie-container">
+        <details>
+            <summary>/balancetop</summary>
+            <p>Commande qui permet de voir le top des joueurs qui ont le plus d'argent sur le server ainsi que le montant actuel des joueurs dans le top.</p>
+        </details>
+    </div>
+
+    <div id="changepassword" class="categorie-container">
+        <details>
+            <summary>/changepassword</summary>
+            <p>Commande qui permet de modifier votre mot de passe pour vous connecter lorsque vous rejoignez le serveur.</p>
+        </details>
+    </div>
+
+    <div id="claim" class="categorie-container">
+        <details>
+            <summary>/claim</summary>
+            <p>Commande qui permet de réclamer/claim un chunk. Lorsque un chunk est réclamé, celui-ci est protégé de toute destruction, les personnes de votre équipe/team ont par défaut les autorisations afin de pourvoir intéragir avec le chunk.</p>
+        </details>
+    </div>
+
+    <div id="delhome" class="categorie-container">
+        <details>
+            <summary>/delhome</summary>
+            <p>Commande qui permet de supprimer un home (point de spawn) de votre compte.</p>
+        </details>
+    </div>
+
+    <div id="discord" class="categorie-container">
+        <details>
+            <summary>/discord</summary>
+            <p>???????? Commande qui link ou donne le lien du serveur Discord lié au serveur.</p>
+        </details>
+    </div>
+
+    <div id="email" class="categorie-container">
+        <details>
+            <summary>/email</summary>
+            <p>Commande qui permet de lier un email à votre compte sur le serveur afin de pouvoir réinitaliser le mot de passe en cas de perte.</p>
+        </details>
+    </div>
+
+    <div id="help" class="categorie-container">
+        <details>
+            <summary>/help</summary>
+            <p>Commande qui permet de montrer les commandes disponibles et leur description en cas de besoin.</p>
+        </details>
+    </div>
+
+    <div id="home" class="categorie-container">
+        <details>
+            <summary>/home</summary>
+            <p>Commande qui permet de vous téléporter à un point de spawn (notamment votre maison par exemple).</p>
+        </details>
+    </div>
+
+    <div id="leaderboard" class="categorie-container">
+        <details>
+            <summary>/leaderboard</summary>
+            <p>Commande qui permet de vous téléporter directement au lobby devant les leaderboards.</p>
+        </details>
+    </div>
+
+    <div id="lobby" class="categorie-container">
+        <details>
+            <summary>/lobby</summary>
+            <p>Commande qui permet de se téléporter au lobby (monde principal).</p>
+        </details>
+    </div>
+
+    <div id="login" class="categorie-container">
+        <details>
+            <summary>/login</summary>
+            <p>Commande qui permet de vous connecter sur le serveur. Exemple: /login monsupermotdepasse</p>
+        </details>
+    </div>
+
+    <div id="logout" class="categorie-container">
+        <details>
+            <summary>/logout</summary>
+            <p>Commande qui permet de vous déconnecter de votre compte sur le serveur. Nécessitera de refaire /login si vous voulez pouvoir jouer (même sans se déconnecter du serveur).</p>
+        </details>
+    </div>
+
+    <div id="mail" class="categorie-container">
+        <details>
+            <summary>/mail</summary>
+            <p>Commande qui permet de voir vos messsages/mails sur le serveur. Les messages ou les mails peuvent par exemple être un jour vous a acheté (une pioche) et vous avez obtenu (500$).</p>
+        </details>
+    </div>
+
+    <div id="menu" class="categorie-container">
+        <details>
+            <summary>/menu</summary>
+            <p>Commande qui permet d'ouvrir le menu principal. Le menu principal contient la sélection des modes de jeu et les statistiques joueurs.</p>
+        </details>
+    </div>
+
+    <div id="msg" class="categorie-container">
+        <details>
+            <summary>/msg</summary>
+            <p>Commande qui permet d'envoyer un message privé à un joueur sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="pay" class="categorie-container">
+        <details>
+            <summary>/pay</summary>
+            <p>Commande qui permet de payer/donner de l'argent à un joueur sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="pvp" class="categorie-container">
+        <details>
+            <summary>/pvp</summary>
+            <p>Commande qui permet d'activer/désactiver le mode PvP. Le PvP est le fait de pouvoir s'attaquer entre joueurs. ATTENTION : Un minuteur/cooldown pour éviter les abus est mis en place et vous ne pouvez le désactiver si vous êtes considéré en combat.</p>
+        </details>
+    </div>
+
+    <div id="recipe" class="categorie-container">
+        <details>
+            <summary>/recipe</summary>
+            <p>Commande qui permet de voir la recette pour fabriquer le bloc que vous tenez actuellement dans la main.</p>
+        </details>
+    </div>
+
+    <div id="register" class="categorie-container">
+        <details>
+            <summary>/register</summary>
+            <p>Commande qui permet de vous enregistrer/inscrire sur le serveur. Il faut mettre 2 fois le mot de passe après le nom de la commande afin de le confirmer. Exemple: /register monsupermotdepasse monsupermotdepasse</p>
+        </details>
+    </div>
+
+    <div id="ressources" class="categorie-container">
+        <details>
+            <summary>/ressources</summary>
+            <p>Commande qui permet de se téléporter dans le monde ressources/minage.</p>
+        </details>
+    </div>
+
+    <div id="rtp" class="categorie-container">
+        <details>
+            <summary>/rtp</summary>
+            <p>Commande qui permet de se téléporter quelque part aléatoirement dans le monde où vous êtes actuellement.</p>
+        </details>
+    </div>
+
+    <div id="rules" class="categorie-container">
+        <details>
+            <summary>/rules</summary>
+            <p>Commande qui affiche les règles du serveur.</p>
+        </details>
+    </div>
+
+    <div id="sethome" class="categorie-container">
+        <details>
+            <summary>/sethome</summary>
+            <p>Commande qui permet de définir le point de spawn de la commande /home.</p>
+        </details>
+    </div>
+
+    <div id="shop" class="categorie-container">
+        <details>
+            <summary>/shop</summary>
+            <p>Commande qui permet d'ouvrir le menu shop afin d'y acheter des items ou des claims supplémentaires.</p>
+        </details>
+    </div>
+
+    <div id="skills" class="categorie-container">
+        <details>
+            <summary>/skills</summary>
+            <p>Commande qui permet de voir les skills que vous avez acquis.</p>
+        </details>
+    </div>
+
+    <div id="spawn" class="categorie-container">
+        <details>
+            <summary>/spawn</summary>
+            <p>Commande qui permet de se téléporter au spawn du monde dans le quel vous êtes actuellement.</p>
+        </details>
+    </div>
+
+    <div id="statz" class="categorie-container">
+        <details>
+            <summary>/statz</summary>
+            <p>Commande qui permet de voir toutes ses statistiques sur le serveur enregistrées par le plugin statz.</p>
+        </details>
+    </div>
+
+    <div id="suicide" class="categorie-container">
+        <details>
+            <summary>/suicide</summary>
+            <p>Commande qui permet de se suicider comme le nom l'indique. Peut être utile si vous êtes bloqués dans un bloc par exemple. ATTENTION : Cela va normalement créer une tombe avec votre stuff dedans, pensez à aller le chercher si vous ne voulez pas le perdre.</p>
+        </details>
+    </div>
+
+    <div id="survie" class="categorie-container">
+        <details>
+            <summary>/survie</summary>
+            <p>Commande qui permet de se téléporter dans le monde survie.</p>
+        </details>
+    </div>
+
+    <div id="tpa" class="categorie-container">
+        <details>
+            <summary>/tpa</summary>
+            <p>Commande qui permet d'envoyer une demande de votre téléportation vers un joueur (Vous serez téléportés au joueur questionné).</p>
+        </details>
+    </div>
+
+    <div id="tpaccept" class="categorie-container">
+        <details>
+            <summary>/tpaccept</summary>
+            <p>Commande qui permet d'accepter la demande de téléportation d'un joueur.</p>
+        </details>
+    </div>
+
+    <div id="tpahere" class="categorie-container">
+        <details>
+            <summary>/tpahere</summary>
+            <p>Commande qui permet d'envoyer une demande de téléportation d'un joueur vers vous. (Le joueur questionné sera téléporté à vous).</p>
+        </details>
+    </div>
+
+    <div id="tpdeny" class="categorie-container">
+        <details>
+            <summary>/tpdeny</summary>
+            <p>Commande qui permet de refuser une demande de téléportation d'un joueur.</p>
+        </details>
+    </div>
+
+    <div id="voicechat" class="categorie-container">
+        <details>
+            <summary>/voicechat</summary>
+            <p>Commande qui permet d'ouvrir le menu du mod Simple Voice Chat.</p>
+        </details>
+    </div>
+
+    <div id="warp" class="categorie-container">
+        <details>
+            <summary>/warp</summary>
+            <p>Commande qui permet de se téléporter vers un point de téléportation public (adressables uniquement par des modérateurs).</p>
+        </details>
+    </div>
+    
+    <br>
+    <h1 class="titre-categorie">Commandes des modérateurs: (à effectuer)</h1>
+    
+    <div id="ban" class="categorie-container">
+        <details>
+            <summary>/ban</summary>
+            <p>Commande qui permet de bannir définitivement un joueur sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="checkban" class="categorie-container">
+        <details>
+            <summary>/checkban</summary>
+            <p>Commande qui permet de vérifier si un joueur est banni ou non sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="clear" class="categorie-container">
+        <details>
+            <summary>/clear</summary>
+            <p>Commande qui permet de nettoyer/enlever tous les items de l'inventaire d'un joueur.</p>
+        </details>
+    </div>
+
+    <div id="clearlag" class="categorie-container">
+        <details>
+            <summary>/clearlag</summary>
+            <p>Ensemble de commandes du plugin clearlag qui permet de réduire le lag/latence sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="commandwhitelist" class="categorie-container">
+        <details>
+            <summary>/commandwhitelist</summary>
+            <p>Commande qui permet de whitelist une commande sur le serveur. Le fait de whitelister une commande dans un groupe permet non seulement à celui-ci de la voir apparaître dans le tab-complete/auto completion mais aussi de pouvoir l'exécuter.</p>
+        </details>
+    </div>
+
+    <div id="ec" class="categorie-container">
+        <details>
+            <summary>/ec</summary>
+            <p>Commande qui permet d'ouvrir le coffre d'ender d'un joueur.</p>
+        </details>
+    </div>
+
+    <div id="effect" class="categorie-container">
+        <details>
+            <summary>/effect</summary>
+            <p>Commande qui permet d'appliquer un effet à un joueur.</p>
+        </details>
+    </div>
+
+    <div id="ext" class="categorie-container">
+        <details>
+            <summary>/ext</summary>
+            <p>Commande qui permet d'éteindre un joueur en feu sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="feed" class="categorie-container">
+        <details>
+            <summary>/feed</summary>
+            <p>Commande qui permet de nourrir un joueur sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="fly" class="categorie-container">
+        <details>
+            <summary>/fly</summary>
+            <p>Commande qui permet d'activer le mode fly/voler pour un joueur sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="gamemode" class="categorie-container">
+        <details>
+            <summary>/gamemode ou /gm</summary>
+            <p>Commande qui permet de définir le mode de jeu (créatif/survie/aventure/spectateur) d'un joueur sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="give" class="categorie-container">
+        <details>
+            <summary>/give</summary>
+            <p>Commande qui permet de donner un item à un joueur sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="gmc" class="categorie-container">
+        <details>
+            <summary>/gmc</summary>
+            <p>Raccourci de commande pour définir le mode de jeu CREATIF d'un joueur sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="gms" class="categorie-container">
+        <details>
+            <summary>/gms</summary>
+            <p>Raccourci de commande pour définir le mode de jeu SURVIE d'un joueur sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="gmsp" class="categorie-container">
+        <details>
+            <summary>/gmsp</summary>
+            <p>Raccourci de commande pour définir le mode de jeu SPECTATEUR d'un joueur sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="god" class="categorie-container">
+        <details>
+            <summary>/god</summary>
+            <p>Commande qui permet d'activer le mode god/dieu pour un joueur sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="heal" class="categorie-container">
+        <details>
+            <summary>/heal</summary>
+            <p>Commande qui permet de heal/regénérer un joueur sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="invsee" class="categorie-container">
+        <details>
+            <summary>/invsee</summary>
+            <p>Commande qui permet de voir et manipuler l'inventaire d'un joueur sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="jail" class="categorie-container">
+        <details>
+            <summary>/jail</summary>
+            <p>Commande qui permet de mettre en prison un joueur sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="kick" class="categorie-container">
+        <details>
+            <summary>/kick</summary>
+            <p>Commande qui permet de kick/déconnecter/expulser un joueur du serveur.</p>
+        </details>
+    </div>
+
+    <div id="kill" class="categorie-container">
+        <details>
+            <summary>/kill</summary>
+            <p>Commande qui permet de tuer instantanément un joueur sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="luckperms" class="categorie-container">
+        <details>
+            <summary>/luckperms ou /lp</summary>
+            <p>Ensemble de commandes du plugin LuckPerms qui permet de gérer les autorisations et autres d'un joueur dans le serveur.</p>
+        </details>
+    </div>
+
+    <div id="maintenance" class="categorie-container">
+        <details>
+            <summary>/maintenance</summary>
+            <p>Ensemble de commandes du plugin Maintenance qui permet de gérer le mode maintenance afin de restreindre l'accès au serveur uniquement aux personnes autorisées sur la whitelist dédiée.</p>
+        </details>
+    </div>
+
+    <div id="mute" class="categorie-container">
+        <details>
+            <summary>/mute</summary>
+            <p>Commande qui permet de mute/mettre en muet/sourdine définitivement un joueur sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="mvtp" class="categorie-container">
+        <details>
+            <summary>/mvtp</summary>
+            <p>Commande qui permet de téléporter un joueur d'un monde à l'autre sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="pvpstatus" class="categorie-container">
+        <details>
+            <summary>/pvpstatus</summary>
+            <p>Commande qui permet de voir le statut PvP d'un joueur sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="sc" class="categorie-container">
+        <details>
+            <summary>/sc</summary>
+            <p>Commande qui permet de ???????</p>
+        </details>
+    </div>
+
+    <div id="seen" class="categorie-container">
+        <details>
+            <summary>/seen</summary>
+            <p>Commande qui permet de ???????</p>
+        </details>
+    </div>
+
+    <div id="socialspy" class="categorie-container">
+        <details>
+            <summary>/socialspy</summary>
+            <p>Commande qui permet de voir la conversation privée (/msg) entre deux joueurs sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="spectate" class="categorie-container">
+        <details>
+            <summary>/spectate</summary>
+            <p>Commande qui permet de suivre en spectateur un joueur sur le serveur. ???????</p>
+        </details>
+    </div>
+
+    <div id="sudo" class="categorie-container">
+        <details>
+            <summary>/sudo</summary>
+            <p>Commande qui permet de ???????</p>
+        </details>
+    </div>
+
+    <div id="summon" class="categorie-container">
+        <details>
+            <summary>/summon</summary>
+            <p>Commande qui permet de faire apparaître une entité sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="teleport" class="categorie-container">
+        <details>
+            <summary>/teleport ou /tp</summary>
+            <p>Commande qui permet de téléporter un joueur sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="tempban" class="categorie-container">
+        <details>
+            <summary>/tempban</summary>
+            <p>Commande qui permet de bannir temporairement un joueur sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="tempmute" class="categorie-container">
+        <details>
+            <summary>/ban</summary>
+            <p>Commande qui permet de mute/mettre en muet/sourdine temporairement un joueur sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="time" class="categorie-container">
+        <details>
+            <summary>/time</summary>
+            <p>Commande qui permet de définir le temps/l'heure du monde dans le quel vous vous trouvez sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="unban" class="categorie-container">
+        <details>
+            <summary>/unban</summary>
+            <p>Commande qui permet de débannir un joueur sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="unjail" class="categorie-container">
+        <details>
+            <summary>/unjail</summary>
+            <p>Commande qui permet de sortir de prison un joueur sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="unmute" class="categorie-container">
+        <details>
+            <summary>/unmute</summary>
+            <p>Commande qui permet de unmute/enlever le muet/sourdine d'un joueur sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="vanish" class="categorie-container">
+        <details>
+            <summary>/vanish ou /v</summary>
+            <p>Commande qui permet de se vanish/mettre en mode vanish sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="warn" class="categorie-container">
+        <details>
+            <summary>/warn</summary>
+            <p>Commande qui permet d'avertir un joueur sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="warns" class="categorie-container">
+        <details>
+            <summary>/warns</summary>
+            <p>Commande qui permet de voir les warns/avertissements d'un joueur sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="weather" class="categorie-container">
+        <details>
+            <summary>/weather</summary>
+            <p>Commande qui permet de changer la météo du monde dans le quel vous êtes actuellement sur le serveur.</p>
+        </details>
+    </div>
+
+    <div id="whois" class="categorie-container">
+        <details>
+            <summary>/whois</summary>
+            <p>Commande qui permet de ???????</p>
+        </details>
+    </div>
+</div>
+
+<footer>
+  <div>
+    © 2025 – Moxiocraft • L’Ère des Rouages
+  </div>
+  <div>
+    Certains logos ont été générés par l'IA et modifiés par nos soins.
+  </div>
+</footer>
+
+<script>
+    window.addEventListener('message', function(event) {
+        // A security check on the origin is best practice, but we'll skip a strict
+        // one here since we're dealing with local files.
+        
+        // Check if the message contains our expected data format.
+        if (event.data && typeof event.data.frameHeight === 'number') {
+            const iframe = document.getElementById('news-iframe');
+            if (iframe) {
+                // Set the iframe height, adding a little extra space for safety.
+                iframe.style.height = (event.data.frameHeight + 20) + 'px';
+            }
+        }
+    });
+</script>
+
+      <script src="script.js" defer></script>
+
+</body>
+</html>
